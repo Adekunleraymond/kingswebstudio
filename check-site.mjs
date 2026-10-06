@@ -27,7 +27,7 @@ const structured=main.match(/<script type="application\/ld\+json">([\s\S]*?)<\/s
 new vm.Script(await fs.readFile(path.join(root,'script.js'),'utf8'));
 const formFields=['name','email','phone','business','website-type','description','budget'];
 for(const field of formFields)if(!main.includes('id="'+field+'"'))errors.push('Missing inquiry field '+field);
-for(const p of ['assets/manrope.woff2','assets/studio-devices-640.webp','assets/studio-devices-1200.webp','assets/touch-icon.png','favicon.svg','robots.txt','sitemap.xml'])try{const stat=await fs.stat(path.join(root,p));if(stat.size===0)errors.push('Empty asset '+p);}catch{errors.push('Missing asset '+p);}
+for(const p of ['manrope.woff2','studio-devices-640.webp','studio-devices-1200.webp','touch-icon.png','favicon.svg','robots.txt','sitemap.xml'])try{const stat=await fs.stat(path.join(root,p));if(stat.size===0)errors.push('Empty asset '+p);}catch{errors.push('Missing asset '+p);}
 const forbidden=[...main.matchAll(/<a\b[^>]*href="([^"]*)"/g)].map(m=>m[1]).filter(h=>/facebook\.com|instagram\.com|linkedin\.com|tiktok\.com|twitter\.com|x\.com/.test(h));
 if(forbidden.length)errors.push('Social media link found');
 console.log(JSON.stringify({pagesChecked:pages.length,errors},null,2));

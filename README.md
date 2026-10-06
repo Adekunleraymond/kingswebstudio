@@ -8,6 +8,19 @@ Current: https://adekunleraymond.github.io/kingswebstudio/
 
 GitHub Pages publishes the `main` branch from the repository root. Keep `.nojekyll` so all public assets are served as uploaded.
 
+## Uploading through GitHub
+
+This edition keeps every file at the repository root. Each of the six demo projects has a unique filename, so a file-picker upload cannot overwrite the homepage with a demo page.
+
+1. Extract the ZIP and open the extracted folder.
+2. On the repository's `main` branch, choose **Add file → Upload files**.
+3. Select every file inside the extracted folder. Upload the files directly at the repository root.
+4. Check that the list includes `index.html`, `styles.css`, `script.js`, `concept-monarch.html` and the other five `concept-*.html` files.
+5. Commit the upload directly to `main`. Matching filenames replace the current files.
+6. Wait for the GitHub Pages deployment to succeed, then open the live URL and check the homepage, images, portfolio and contact flow.
+
+Do not upload the ZIP itself or its enclosing folder. This package contains no nested website folders.
+
 ## Local preview
 
 Requires Node.js 18 or newer.
@@ -23,13 +36,13 @@ Open the address printed by the server. `npm run check` verifies internal links,
 - `index.html`: homepage copy, services, packages, FAQ, contact fields and SEO metadata.
 - `styles.css`: brand tokens, layouts, responsive rules and reduced-motion styles.
 - `script.js`: mobile navigation, portfolio filters, project inquiry preparation and copy behavior.
-- `concepts/*/index.html`: six clearly labelled fictional demonstration projects.
-- `concepts/concepts.css`: shared concept-page styling.
+- `concept-*.html`: six clearly labelled fictional demonstration projects.
+- `concepts.css`: shared concept-page styling.
 - `privacy.html`: a concise explanation of the contact experience.
-- `assets/`: locally hosted fonts and compressed imagery.
+- `manrope*.woff2`, `studio-devices-*.webp` and `touch-icon.png`: locally hosted fonts and compressed imagery.
 - `robots.txt` and `sitemap.xml`: search indexing essentials.
 - `404.html`: custom error page.
-- `scripts/dev-server.mjs` and `scripts/check-site.mjs`: development helpers.
+- `dev-server.mjs` and `check-site.mjs`: development helpers.
 
 ## Contact flow
 
@@ -60,9 +73,8 @@ GitHub Pages project sites cannot control the host-level `/robots.txt`. The incl
 
 The existing crown/KW SVG was retained and recoloured to match the violet brand. The laptop-and-phone hero was generated for this website, then compressed to 1200px and 640px WebP versions.
 
-Manrope is distributed under the SIL Open Font License. Its full license is included in `assets/Manrope-OFL.txt`. Fonts and imagery are hosted locally; the page makes no third-party font or image requests.
+Manrope is distributed under the SIL Open Font License. Its full license is included in `Manrope-OFL.txt`. Fonts and imagery are hosted locally; the page makes no third-party font or image requests.
 
 ## Release validation
 
 See `QA.md` for the checks completed for the October 2026 release.
-

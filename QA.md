@@ -53,3 +53,16 @@ No JavaScript framework or runtime dependencies. Fonts hosted locally. Hero WebP
 
 These are development checks, not a formal WCAG certification or a guarantee of search rankings.
 
+## GitHub upload correction — 6 October 2026
+
+The manual upload placed folder contents at the repository root and overwrote the homepage with the Orbit concept. This edition uses unique root filenames for all website files. Asset URLs, concept links, return links, font URLs, development commands and documentation were updated together. Visual design, business content and inquiry behavior were preserved.
+
+- Static checks pass across all nine HTML pages with no broken local links or anchors.
+- The corrected homepage loads its local fonts and all images.
+- Rechecked all nine viewport widths listed above, all six concept pages at 390px, and all five enlarged-text widths; no horizontal overflow or failed homepage images.
+- Mobile menu opening, navigation closure, Escape, focus restoration, focus containment, image alt attributes and form labels pass.
+- Followed the homepage → Monarch concept → homepage portfolio route successfully.
+- Prepared a filled sample inquiry, verified the correct WhatsApp and email destinations and business details, and confirmed Edit details retains the supplied name. No message was sent.
+- Browser console entries were from the browser extension; no application error was observed.
+
+Validation used the managed local preview in Chrome. The standalone Playwright command was unavailable; the existing browser runtime was used without adding dependencies. The repaired live deployment still needs verification after the user uploads and commits this package.
