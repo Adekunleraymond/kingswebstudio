@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adekunleraymond.github.io/kingswebstudio/sitemap.xml
+

@@ -1,0 +1,2 @@
+{"name":"kings-web-studio","private":true,"version":"1.0.0","description":"King’s Web Studio — dependency-free static website","scripts":{"dev":"node scripts/dev-server.mjs","check":"node scripts/check-site.mjs"}}
+
